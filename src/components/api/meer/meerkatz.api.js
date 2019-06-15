@@ -12,8 +12,19 @@ const Meerkats = () => {
   }, [])
   console.log(meerkatsApiCall)
 
+  // Item Level Query
   const itemLevelGear = { ...meerkatsApiCall.gear }
   const itemLevel = itemLevelGear.item_level_equipped
+
+  // Healer Rank Query
+  const healerRankTop = { ...meerkatsApiCall.mythic_plus_ranks }
+  const healerRankMiddle = healerRankTop.class_healer
+  const healerRank = { ...healerRankMiddle }
+
+  // Realm Rank Query
+  const realmRankTop = { ...meerkatsApiCall.mythic_plus_ranks }
+  const realmRankMiddle = realmRankTop.class
+  const realmRank = { ...realmRankMiddle }
 
   return (
     <MeerkatzCard
@@ -22,6 +33,8 @@ const Meerkats = () => {
       classSpec={meerkatsApiCall.active_spec_name}
       realm={meerkatsApiCall.realm}
       ilvl={itemLevel}
+      healerRank={healerRank.realm}
+      realmRank={realmRank.realm}
     />
   )
 }
