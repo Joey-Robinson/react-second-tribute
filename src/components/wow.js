@@ -5,13 +5,13 @@ import Meerkats from "./api/meer/meerkatz.api"
 const WowStyledSection = style.section`
   background: #e7e0e0;
   display: grid;
-  grid-column: 1;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-row: 3;
 `
 
 const Wow = () => (
   <WowStyledSection>
-    <h1>From the Wow component</h1>
     <Meerkats />
   </WowStyledSection>
 )

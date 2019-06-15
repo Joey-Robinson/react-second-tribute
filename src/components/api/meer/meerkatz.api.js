@@ -11,8 +11,18 @@ const Meerkats = () => {
       .then(response => setMeerkatsApiCall(response))
   }, [])
   console.log(meerkatsApiCall)
+
+  const itemLevelGear = { ...meerkatsApiCall.gear }
+  const itemLevel = itemLevelGear.item_level_equipped
+
   return (
-    <MeerkatzCard name={meerkatsApiCall.name} type={meerkatsApiCall.class} />
+    <MeerkatzCard
+      name={meerkatsApiCall.name}
+      spec={meerkatsApiCall.class}
+      classSpec={meerkatsApiCall.active_spec_name}
+      realm={meerkatsApiCall.realm}
+      ilvl={itemLevel}
+    />
   )
 }
 
