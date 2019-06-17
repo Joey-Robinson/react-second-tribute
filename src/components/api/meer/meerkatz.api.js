@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import Flippy, { FrontSide, BackSide } from "react-flippy"
 import MeerkatzCard from "./meerkatz.card"
 
 const Meerkats = () => {
@@ -26,16 +27,30 @@ const Meerkats = () => {
   const realmRankMiddle = realmRankTop.class
   const realmRank = { ...realmRankMiddle }
 
+  const styles = {
+    background: "black",
+  }
+
   return (
-    <MeerkatzCard
-      name={meerkatsApiCall.name}
-      spec={meerkatsApiCall.class}
-      classSpec={meerkatsApiCall.active_spec_name}
-      realm={meerkatsApiCall.realm}
-      ilvl={itemLevel}
-      healerRank={healerRank.realm}
-      realmRank={realmRank.realm}
-    />
+    <Flippy
+      style={{ gridColumn: "2 / 5", gridRow: "3", height: "52em" }}
+      flipOnHover={true}
+      flipOnClick={false}
+      flipDirection="horizontal"
+    >
+      <FrontSide style={{ background: "white", height: "52em" }}>
+        <MeerkatzCard
+          name={meerkatsApiCall.name}
+          spec={meerkatsApiCall.class}
+          classSpec={meerkatsApiCall.active_spec_name}
+          realm={meerkatsApiCall.realm}
+          ilvl={itemLevel}
+          healerRank={healerRank.realm}
+          realmRank={realmRank.realm}
+        />
+      </FrontSide>
+      <BackSide style={{ background: "white", height: "52em" }}>wewow</BackSide>
+    </Flippy>
   )
 }
 

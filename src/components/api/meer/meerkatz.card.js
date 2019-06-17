@@ -6,9 +6,7 @@ const StyledCard = style.div`
   grid-column: 2 / 5;
   background: white;
   color: black;
-  perspective: 150rem;
-  position: relative;
-  height: 52rem;
+  height: 50rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr repeat(5, 1fr);

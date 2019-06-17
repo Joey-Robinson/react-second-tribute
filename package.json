@@ -19,8 +19,9 @@
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
-    "react-flipcard": "^0.2.1",
+    "react-flippy": "^0.1.5",
     "react-helmet": "^5.2.1",
+    "react-modal": "^3.8.1",
     "styled-components": "^4.3.1"
   },
   "devDependencies": {
