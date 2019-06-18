@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import Flippy, { FrontSide, BackSide } from "react-flippy"
-import MeerkatzFrontCard from "./meerkatz.front-card"
 import WowModal from "../../modal"
+import MeerkatzFrontCard from "./meerkatz.front-card"
 import MeerkatzBackCard from "./meerkatz.back-card"
-import List from "./list"
 
 const Meerkats = () => {
   const [meerkatsApiCall, setMeerkatsApiCall] = useState({})
@@ -35,15 +34,19 @@ const Meerkats = () => {
   const recentRunsMiddle = recentRunsTop[0]
   const recentRuns = { ...recentRunsMiddle }
 
-  // const affixesOne = { ...meerkatsApiCall.mythic_plus_recent_runs }
-  // const affixesTwo = affixesOne
-  // const affixesThree = affixesTwo.affixes
-  // console.log(affixesThree)
-  // const recentAffixes = []
-  // for (let [key, value] of Object.entries(affixesThree)) {
-  //   recentAffixes.push(<li>{value.name}</li>)
-  // }
-  // console.log(recentAffixes)
+  // Mythic Plus Recent Affixes - For CardBack
+  const recentAffixesTop = { ...meerkatsApiCall.mythic_plus_recent_runs }
+  const recentAffixesMiddle = recentAffixesTop[0]
+  const recentAffixes = { ...recentAffixesMiddle }
+  const recent = { ...recentAffixes.affixes }
+  const affixName = []
+  for (let [key, value] of Object.entries(recent)) {
+    affixName.push(
+      <p style={{ display: "inline-block" }} key={key}>
+        {value.name}&nbsp;
+      </p>
+    )
+  }
   return (
     <Flippy
       style={{
@@ -81,6 +84,7 @@ const Meerkats = () => {
       >
         <MeerkatzBackCard
           dungeon={recentRuns.dungeon}
+          affixes={affixName}
           level={recentRuns.mythic_level}
           chests={recentRuns.num_keystone_upgrades}
           link={recentRuns.url}

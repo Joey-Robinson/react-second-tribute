@@ -19,6 +19,10 @@ const BackDiv = styled.div`
     justify-self: left;
     padding: 1rem 3rem;
     font-size: 2.3rem;
+    span {
+      color: black;
+      font-weight: 700;
+    }
   }
   h1 {
     font-size: 3rem;
