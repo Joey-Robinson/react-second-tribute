@@ -7,7 +7,7 @@ const ModalRecent = styled.div`
   grid-row: 1 / 3;
   align-self: start;
   margin: 1.5rem 0 0 0;
-  justify-self: left;
+  justify-self: center;
 `
 
 const ModalBest = styled.div`
@@ -15,7 +15,23 @@ const ModalBest = styled.div`
   grid-row: 1 / 3;
   align-self: start;
   margin: 1.5rem 0 0 0;
-  justify-self: right;
+  justify-self: center;
+`
+
+const ModalWeeklyBest = styled.div`
+  grid-column: 1 / 3;
+  grid-row: 3 / -1;
+  align-self: center;
+  margin: 1.5rem 0 0 0;
+  justify-self: center;
+`
+
+const ModalOverallHighest = styled.div`
+  grid-column: 4;
+  grid-row: 3 / -1;
+  align-self: center;
+  margin: 1.5rem 0 0 0;
+  justify-self: center;
 `
 
 const MeerkatzModal = ({ recent, best, weeklyBest, highest }) => {
@@ -73,6 +89,24 @@ const MeerkatzModal = ({ recent, best, weeklyBest, highest }) => {
             {best}
           </ul>
         </ModalBest>
+        <ModalWeeklyBest>
+          <ul style={{ listStyle: "none", fontSize: "2rem", padding: "1rem" }}>
+            <h1 style={{ textAlign: "center" }}>Weekly Best M+</h1>
+            {weeklyBest}
+          </ul>
+        </ModalWeeklyBest>
+        <ModalOverallHighest>
+          <ul style={{ listStyle: "none", fontSize: "2rem", padding: "1rem" }}>
+            <h1
+              style={{
+                textAlign: "center",
+              }}
+            >
+              Highest M+
+            </h1>
+            {highest}
+          </ul>
+        </ModalOverallHighest>
         <button
           style={{
             gridRow: "-1",

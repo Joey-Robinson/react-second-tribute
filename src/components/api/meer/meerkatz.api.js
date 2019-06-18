@@ -50,7 +50,6 @@ const Meerkats = () => {
   // Modal Content - Recent M+ Runs
   const modalRecentTop = { ...meerkatsApiCall.mythic_plus_recent_runs }
   const modalRecentMiddle = modalRecentTop
-  console.log(modalRecentMiddle)
   const modalRecent = []
   for (let [key, value] of Object.entries(modalRecentMiddle)) {
     modalRecent.push(
@@ -69,6 +68,68 @@ const Meerkats = () => {
   }
 
   // Modal Content - Best M+ Runs
+  const modalBestTop = { ...meerkatsApiCall.mythic_plus_best_runs }
+  const modalBestMiddle = modalBestTop
+  const modalBest = []
+  for (let [key, value] of Object.entries(modalBestMiddle)) {
+    modalBest.push(
+      <li key={key}>
+        <a
+          style={{ color: "orange" }}
+          href={value.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {value.mythic_level} - {value.dungeon} - {value.num_keystone_upgrades}{" "}
+          Chest(s)
+        </a>
+      </li>
+    )
+  }
+
+  // Modal Content - Best Weekly M+ Runs
+  const modalWeeklyTop = {
+    ...meerkatsApiCall.mythic_plus_weekly_highest_level_runs,
+  }
+  const modalWeeklyMiddle = modalWeeklyTop
+  const modalWeeklyBest = []
+  for (let [key, value] of Object.entries(modalWeeklyMiddle)) {
+    modalWeeklyBest.push(
+      <li key={key}>
+        <a
+          style={{ color: "orange" }}
+          href={value.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {value.mythic_level} - {value.dungeon} - {value.num_keystone_upgrades}{" "}
+          Chest(s)
+        </a>
+      </li>
+    )
+  }
+
+  // Modal Content - Best Overall M+
+  const modalBestOverallTop = {
+    ...meerkatsApiCall.mythic_plus_highest_level_runs,
+  }
+  const modalBestOverallMiddle = modalBestOverallTop
+  const modalBestoverall = []
+  for (let [key, value] of Object.entries(modalBestOverallMiddle)) {
+    modalBestoverall.push(
+      <li key={key}>
+        <a
+          style={{ color: "orange" }}
+          href={value.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {value.mythic_level} - {value.dungeon} - {value.num_keystone_upgrades}{" "}
+          Chest(s)
+        </a>
+      </li>
+    )
+  }
 
   return (
     <Flippy
@@ -112,7 +173,12 @@ const Meerkats = () => {
           chests={recentRuns.num_keystone_upgrades}
           link={recentRuns.url}
         />
-        <MeerkatzModal recent={modalRecent} />
+        <MeerkatzModal
+          recent={modalRecent}
+          best={modalBest}
+          weeklyBest={"" ? modalWeeklyBest : "Whoops"}
+          highest={modalBestoverall}
+        />
       </BackSide>
     </Flippy>
   )
