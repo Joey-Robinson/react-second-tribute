@@ -7,7 +7,7 @@ const WowModal = () => {
   const modalStyles = {
     alignSelf: "center",
     gridColumn: "2",
-    gridRow: "3",
+    gridRow: "5",
     justifySelf: "center",
   }
 

@@ -1,9 +1,9 @@
 import React from "react"
-import style from "styled-components"
+import styled from "styled-components"
 
-const StyledHero = style.section`
-background: #e7e0e0;
-display: grid;
+const StyledHero = styled.section`
+  background: #e7e0e0;
+  display: grid;
   grid-column: 1;
   grid-row: 1;
 `

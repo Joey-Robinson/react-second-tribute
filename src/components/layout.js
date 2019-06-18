@@ -1,8 +1,8 @@
 import React from "react"
 import Nav from "./nav"
-import style, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
-const StyledMain = style.main`
+const StyledMain = styled.main`
   overflow-x: hidden;
   width: 100vw;
   display: grid;

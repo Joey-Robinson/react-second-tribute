@@ -1,16 +1,24 @@
 import React from "react"
-import style from "styled-components"
+import styled from "styled-components"
 
-const BackDiv = style.div`
+const BackDiv = styled.div`
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   width: 100%;
   height: 100%;
+  a {
+    color: white;
+  }
   ul {
     list-style: none;
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    justify-self: left;
+    padding: 1rem 3rem;
+    font-size: 2.3rem;
   }
   h1 {
     font-size: 3rem;
@@ -27,24 +35,26 @@ const MeerkatzBackCard = ({ dungeon, affixes, level, chests, link }) => {
       <h1>Most Recent M+</h1>
       <ul>
         <li>
-          <span>Dungeon:</span>
+          <span>Dungeon:</span>&nbsp;
           {dungeon}
         </li>
         <li>
-          <span>Affixes:</span>
+          <span>Affixes:</span>&nbsp;
           {affixes}
         </li>
         <li>
-          <span>Level:</span>
+          <span>Level:</span>&nbsp;
           {level}
         </li>
         <li>
-          <span>Chests:</span>
+          <span>Chests:</span>&nbsp;
           {chests}
         </li>
         <li>
-          <span>Link:</span>
-          {link}
+          <span>Link:</span>&nbsp;
+          <a href={link} target="_blank" rel="noreferrer noopener">
+            Raider.io Link
+          </a>
         </li>
       </ul>
     </BackDiv>

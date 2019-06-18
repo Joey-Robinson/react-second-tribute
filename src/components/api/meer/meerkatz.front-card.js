@@ -1,5 +1,5 @@
 import React from "react"
-import style from "styled-components"
+import styled from "styled-components"
 import druid from "../../../images/druid.png"
 
 const styleBG = {
@@ -14,7 +14,7 @@ const styleBG = {
   clipPath: `polygon(0 0, 100% 0, 100% 85%, 0 100%)`,
 }
 
-const StyledCard = style.div`
+const StyledCard = styled.div`
   height: 50rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -53,7 +53,6 @@ const StyledCard = style.div`
       box-decoration-break: clone;
     }
   }
-
 `
 
 const MeerkatzFrontCard = ({

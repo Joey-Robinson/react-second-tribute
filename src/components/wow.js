@@ -1,8 +1,8 @@
 import React from "react"
-import style from "styled-components"
+import styled from "styled-components"
 import Meerkats from "./api/meer/meerkatz.api"
 
-const WowStyledSection = style.section`
+const WowStyledSection = styled.section`
   background: #e7e0e0;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
