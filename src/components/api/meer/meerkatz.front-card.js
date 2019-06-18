@@ -1,11 +1,20 @@
 import React from "react"
 import style from "styled-components"
+import druid from "../../../images/druid.png"
+
+const styleBG = {
+  width: `100%`,
+  backgroundImage: `linear-gradient(to right bottom, #FF7D0A, #e7e0e0), url(${druid})`,
+  backgroundRepeat: `no-repeat`,
+  gridColumn: `1`,
+  gridRow: `1`,
+  backgroundSize: `cover`,
+  height: `23rem`,
+  backgroundBlendMode: `hue`,
+  clipPath: `polygon(0 0, 100% 0, 100% 85%, 0 100%)`,
+}
 
 const StyledCard = style.div`
-  grid-row: 3;
-  grid-column: 2 / 5;
-  background: white;
-  color: black;
   height: 50rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -17,7 +26,13 @@ const StyledCard = style.div`
     display: grid;
     font-size: 1.8rem;
     padding: 0;
-    margin: 0;
+    margin: 1.5rem 0 0 0;
+    li {
+      padding: 1rem;
+    }
+    li:not(:last-child) {
+      border-bottom: 0.2rem solid #eee;
+    }
     span {
       font-weight: bold;
     }
@@ -41,7 +56,7 @@ const StyledCard = style.div`
 
 `
 
-const MeerkatzCard = ({
+const MeerkatzFrontCard = ({
   name,
   classSpec,
   spec,
@@ -51,6 +66,7 @@ const MeerkatzCard = ({
   ilvl,
 }) => (
   <StyledCard>
+    <div style={styleBG} />
     <h4>
       <span>{name}</span>
     </h4>
@@ -74,4 +90,4 @@ const MeerkatzCard = ({
   </StyledCard>
 )
 
-export default MeerkatzCard
+export default MeerkatzFrontCard

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import Flippy, { FrontSide, BackSide } from "react-flippy"
-import MeerkatzCard from "./meerkatz.card"
+import MeerkatzFrontCard from "./meerkatz.front-card"
+import WowModal from "../../modal"
+import MeerkatzBackCard from "./meerkatz.back-card"
 
 const Meerkats = () => {
   const [meerkatsApiCall, setMeerkatsApiCall] = useState([])
@@ -27,19 +29,24 @@ const Meerkats = () => {
   const realmRankMiddle = realmRankTop.class
   const realmRank = { ...realmRankMiddle }
 
-  const styles = {
-    background: "black",
-  }
-
+  // Mythic Plus Recent - For CardBack
+  const recentRunsTop = { ...meerkatsApiCall.mythic_plus_recent_runs }
+  const recentRunsMiddle = recentRunsTop[0]
+  console.log(recentRunsMiddle)
   return (
     <Flippy
-      style={{ gridColumn: "2 / 5", gridRow: "3", height: "52em" }}
+      style={{
+        gridColumn: "2 / 5",
+        gridRow: "3",
+        height: "52em",
+        width: `100%`,
+      }}
       flipOnHover={true}
       flipOnClick={false}
       flipDirection="horizontal"
     >
-      <FrontSide style={{ background: "white", height: "52em" }}>
-        <MeerkatzCard
+      <FrontSide style={{ background: "white", height: "52em", width: `100%` }}>
+        <MeerkatzFrontCard
           name={meerkatsApiCall.name}
           spec={meerkatsApiCall.class}
           classSpec={meerkatsApiCall.active_spec_name}
@@ -49,7 +56,21 @@ const Meerkats = () => {
           realmRank={realmRank.realm}
         />
       </FrontSide>
-      <BackSide style={{ background: "white", height: "52em" }}>wewow</BackSide>
+      <BackSide
+        style={{
+          color: "white",
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateRows: "repeat(3, 1fr)",
+          background: "white",
+          height: "100%",
+          width: "100%",
+          backgroundImage: `linear-gradient(to right bottom, #00FF96, #FF7D0A)`,
+        }}
+      >
+        <MeerkatzBackCard />
+        <WowModal />
+      </BackSide>
     </Flippy>
   )
 }
