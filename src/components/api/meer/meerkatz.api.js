@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Flippy, { FrontSide, BackSide } from "react-flippy"
-import WowModal from "../../modal"
+import MeerkatzModal from "./meerkatz.modal"
 import MeerkatzFrontCard from "./meerkatz.front-card"
 import MeerkatzBackCard from "./meerkatz.back-card"
 
@@ -13,7 +13,6 @@ const Meerkats = () => {
       .then(data => data.json())
       .then(response => setMeerkatsApiCall(response))
   }, [])
-  console.log(meerkatsApiCall)
 
   // Item Level Query
   const itemLevelGear = { ...meerkatsApiCall.gear }
@@ -47,6 +46,30 @@ const Meerkats = () => {
       </p>
     )
   }
+
+  // Modal Content - Recent M+ Runs
+  const modalRecentTop = { ...meerkatsApiCall.mythic_plus_recent_runs }
+  const modalRecentMiddle = modalRecentTop
+  console.log(modalRecentMiddle)
+  const modalRecent = []
+  for (let [key, value] of Object.entries(modalRecentMiddle)) {
+    modalRecent.push(
+      <li key={key}>
+        <a
+          style={{ color: "orange" }}
+          href={value.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {value.mythic_level} - {value.dungeon} - {value.num_keystone_upgrades}{" "}
+          Chest(s)
+        </a>
+      </li>
+    )
+  }
+
+  // Modal Content - Best M+ Runs
+
   return (
     <Flippy
       style={{
@@ -89,7 +112,7 @@ const Meerkats = () => {
           chests={recentRuns.num_keystone_upgrades}
           link={recentRuns.url}
         />
-        <WowModal />
+        <MeerkatzModal recent={modalRecent} />
       </BackSide>
     </Flippy>
   )
