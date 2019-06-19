@@ -4,21 +4,13 @@ import styled from "styled-components"
 const FFInformationDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   a {
-    color: white;
+    color: #fff;
   }
-
   h1 {
     font-size: 2.5rem;
     margin: 0 3rem;
-  }
-  span {
-    grid-column: 3 / 6;
-    display: block;
-    height: 100%;
-    grid-row: 1 / -1;
-    justify-self: right;
   }
 `
 
@@ -90,16 +82,20 @@ const FinalFantasyInformation = ({
     </ServerDiv>
     <ArmoryDiv>
       <h1>
-        <a href={armory}>Lodestone Link &rarr;</a>
+        <a target="_blank" rel="noopener noreferrer" href={armory}>
+          Lodestone Link &rarr;
+        </a>
       </h1>
     </ArmoryDiv>
     <FreeCompanyDiv>
       <h1>
-        <a href={freecompany}>Free Company: The Last Homely House</a>
+        <a target="_blank" rel="noopener noreferrer" href={freecompany}>
+          Free Company: The Last Homely House
+        </a>
       </h1>
     </FreeCompanyDiv>
     <AvatarImageDiv>
-      <a href={avatar}>
+      <a target="_blank" rel="noopener noreferrer" href={avatar}>
         <img src={avatar} alt="" />
       </a>
     </AvatarImageDiv>

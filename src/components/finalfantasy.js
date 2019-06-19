@@ -6,11 +6,12 @@ import FinalFantasyMeer from "./api/finalfantasy/finalfantasy.api"
 const FinalFantasyStyledSection = styled.section`
   background: linear-gradient(
       0deg,
-      rgba(255, 125, 10, 0.5),
-      rgba(0, 255, 150, 0.5)
+      rgba(212, 175, 55, 0.3),
+      rgba(80, 19, 28, 0.3)
     ),
     url(${ishgard}) no-repeat center center / cover;
-  color: white;
+  color: #fff;
+  text-shadow: 2px 2px black;
   grid-row: 4;
 `
 
