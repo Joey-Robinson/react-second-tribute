@@ -32,6 +32,36 @@ const ModalOpenButton = styled.button`
   }
 `
 
+const ModalCloseButton = styled.button`
+  grid-row: -1;
+  grid-column: 3;
+  justify-self: center;
+  align-self: start;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background: #ff7d0a;
+  color: #00ff96;
+  border-radius: 5rem;
+  font-size: 2rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#666, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+`
+
 const ModalRecent = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 3;
@@ -80,6 +110,9 @@ const MeerkatzModal = ({ recent, best, weeklyBest, highest }) => {
       gridTemplateColumns: "repeat(5, 1fr)",
       gridTemplateRows: "repeat(5, 1fr)",
     },
+    overlay: {
+      background: "rgba(0, 0, 0, .75)",
+    },
   }
 
   return (
@@ -123,9 +156,9 @@ const MeerkatzModal = ({ recent, best, weeklyBest, highest }) => {
             {highest}
           </ul>
         </ModalOverallHighest>
-        <ModalOpenButton onClick={() => setModalIsOpen(!modalIsOpen)}>
+        <ModalCloseButton onClick={() => setModalIsOpen(!modalIsOpen)}>
           Close
-        </ModalOpenButton>
+        </ModalCloseButton>
       </Modal>
     </div>
   )
