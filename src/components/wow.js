@@ -12,9 +12,9 @@ const WowStyledSection = styled.section`
     ),
     url(${wowbg}) no-repeat center center / cover;
   display: grid;
+  grid-row: 2;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-row: 2;
 `
 
 const Wow = () => (

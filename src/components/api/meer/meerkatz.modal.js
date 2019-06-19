@@ -3,95 +3,95 @@ import Modal from "react-modal"
 import styled from "styled-components"
 
 const ModalOpenButton = styled.button`
+  align-self: start;
+  background: #00ff96;
+  border-radius: 5rem;
+  border: none;
+  color: #ff7d0a;
+  cursor: pointer;
+  font-size: 2rem;
   grid-row: -1;
   grid-column: 3;
   justify-self: center;
-  align-self: start;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-  color: #ff7d0a;
-  background: #00ff96;
-  border-radius: 5rem;
-  font-size: 2rem;
-  width: 100%;
-  border: none;
   outline: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
   &:hover {
-    transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(#666, 0.2);
+    transform: translateY(-3px);
     &::after {
-      transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
     }
   }
   &:active,
   &:focus {
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
     outline: none;
     transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
   }
 `
 
 const ModalCloseButton = styled.button`
-  grid-row: -1;
-  grid-column: 3;
-  justify-self: center;
   align-self: start;
-  padding: 1rem 1.5rem;
-  cursor: pointer;
   background: #ff7d0a;
-  color: #00ff96;
   border-radius: 5rem;
-  font-size: 2rem;
-  width: 100%;
   border: none;
+  color: #00ff96;
+  cursor: pointer;
+  font-size: 2rem;
+  grid-column: 3;
+  grid-row: -1;
+  justify-self: center;
   outline: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
   &:hover {
-    transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(#666, 0.2);
+    transform: translateY(-3px);
     &::after {
-      transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
     }
   }
   &:active,
   &:focus {
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
     outline: none;
     transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
   }
 `
 
 const ModalRecent = styled.div`
+  align-self: start;
   grid-column: 1 / 3;
   grid-row: 1 / 3;
-  align-self: start;
-  margin: 1.5rem 0 0 0;
   justify-self: center;
+  margin: 1.5rem 0 0 0;
 `
 
 const ModalBest = styled.div`
+  align-self: start;
   grid-column: 3 / -1;
   grid-row: 1 / 3;
-  align-self: start;
-  margin: 1.5rem 0 0 0;
   justify-self: center;
+  margin: 1.5rem 0 0 0;
 `
 
 const ModalWeeklyBest = styled.div`
+  align-self: center;
   grid-column: 1 / 3;
   grid-row: 3 / -1;
-  align-self: center;
-  margin: 1.5rem 0 0 0;
   justify-self: center;
+  margin: 1.5rem 0 0 0;
 `
 
 const ModalOverallHighest = styled.div`
+  align-self: center;
   grid-column: 4;
   grid-row: 3 / -1;
-  align-self: center;
-  margin: 1.5rem 0 0 0;
   justify-self: center;
+  margin: 1.5rem 0 0 0;
 `
 
 const MeerkatzModal = ({ recent, best, weeklyBest, highest }) => {

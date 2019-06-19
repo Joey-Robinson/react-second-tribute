@@ -3,24 +3,24 @@ import { stack as Menu } from "react-burger-menu"
 import styled from "styled-components"
 
 const MenuDiv = styled.div`
-  display: block;
-  padding: 1rem;
   background: orange;
-  position: fixed;
-  width: 46px;
+  border-radius: 10rem;
+  display: block;
   height: 40px;
+  padding: 1rem;
+  position: fixed;
   right: 32px;
   top: 32px;
-  border-radius: 10rem;
+  width: 46px;
 `
 
 const styles = {
   bmBurgerButton: {
-    position: "fixed",
-    width: "36px",
     height: "30px",
+    position: "fixed",
     right: "36px",
     top: "36px",
+    width: "36px",
   },
   bmBurgerBars: {
     background: "#373a47",
@@ -36,13 +36,13 @@ const styles = {
     background: "#bdc3c7",
   },
   bmMenuWrap: {
-    position: "fixed",
     height: "100%",
+    position: "fixed",
   },
   bmMenu: {
     background: "#373a47",
-    padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
+    padding: "2.5em 1.5em 0",
   },
   bmMorphShape: {
     fill: "#373a47",

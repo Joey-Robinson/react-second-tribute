@@ -3,30 +3,30 @@ import styled from "styled-components"
 import druid from "../../../images/druid.png"
 
 const styleBG = {
-  width: `100%`,
+  backgroundBlendMode: `hue`,
   backgroundImage: `linear-gradient(to right bottom, #FF7D0A, #e7e0e0), url(${druid})`,
   backgroundRepeat: `no-repeat`,
+  backgroundSize: `cover`,
+  clipPath: `polygon(0 0, 100% 0, 100% 85%, 0 100%)`,
   gridColumn: `1`,
   gridRow: `1`,
-  backgroundSize: `cover`,
   height: `23rem`,
-  backgroundBlendMode: `hue`,
-  clipPath: `polygon(0 0, 100% 0, 100% 85%, 0 100%)`,
+  width: `100%`,
 }
 
 const StyledCard = styled.div`
-  height: 50rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr repeat(5, 1fr);
+  height: 50rem;
   ul {
-    list-style: none;
-    grid-row: 2 / -1;
-    justify-self: center;
     display: grid;
     font-size: 1.8rem;
-    padding: 0;
+    grid-row: 2 / -1;
+    justify-self: center;
+    list-style: none;
     margin: 1.5rem 0 0 0;
+    padding: 0;
     li {
       padding: 1rem;
     }
@@ -38,19 +38,19 @@ const StyledCard = styled.div`
     }
   }
   h4 {
-    grid-row: 1;
+    background: orange;
+    color: #fff;
     font-size: 2.4rem;
+    grid-row: 1;
     text-transform: uppercase;
     text-align: right;
-    color: #fff;
-    background: orange;
     position: absolute;
-    top: 12rem;
     right: 2rem;
+    top: 12rem;
     width: 40%;
     span {
-      padding: 1.5rem 2rem;
       box-decoration-break: clone;
+      padding: 1.5rem 2rem;
     }
   }
 `

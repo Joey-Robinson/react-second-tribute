@@ -11,12 +11,12 @@ const StyledHero = styled.section`
   grid-template-rows: repeat(5, 1fr);
   h1,
   h2 {
-    grid-column: 1 / -1;
-    justify-self: center;
-    grid-row: 3;
     align-self: center;
-    font-size: 5rem;
     display: inline-block;
+    font-size: 7rem;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-self: center;
     span {
       color: black;
     }
