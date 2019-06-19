@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Typed from "react-typed"
+import Quotes from "./quotes"
 
 const StyledHero = styled.section`
   background: #e7e0e0;
@@ -41,6 +42,7 @@ const Hero = () => {
           loop
         />
       </h1>
+      <Quotes />
     </StyledHero>
   )
 }
