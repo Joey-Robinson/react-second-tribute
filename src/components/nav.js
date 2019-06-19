@@ -1,18 +1,19 @@
 import React from "react"
 import { stack as Menu } from "react-burger-menu"
-import styled from "styled-components"
+// import { Link } from "gatsby"
+// import styled from "styled-components"
 
-const MenuDiv = styled.div`
-  background: orange;
-  border-radius: 10rem;
-  display: block;
-  height: 40px;
-  padding: 1rem;
-  position: fixed;
-  right: 32px;
-  top: 32px;
-  width: 46px;
-`
+// const MenuContainer = styled.div`
+//   background: orange;
+//   border-radius: 10rem;
+//   display: block;
+//   height: 40px;
+//   padding: 1rem;
+//   position: fixed;
+//   right: 32px;
+//   top: 32px;
+//   width: 46px;
+// `
 
 const styles = {
   bmBurgerButton: {
@@ -55,20 +56,18 @@ const styles = {
     display: "inline-block",
   },
   bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)",
+    background: "rgba(0, 0, 0, .5)",
   },
 }
 
 const Nav = () => (
-  <MenuDiv>
-    <Menu right styles={styles}>
-      <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-      </ul>
-    </Menu>
-  </MenuDiv>
+  <Menu right styles={styles}>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+  </Menu>
 )
 
 export default Nav
