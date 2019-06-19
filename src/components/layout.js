@@ -1,13 +1,14 @@
 import React from "react"
 import Nav from "./nav"
 import styled, { createGlobalStyle } from "styled-components"
+import Footer from "./footer"
 
 const StyledMain = styled.main`
   overflow-x: hidden;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 100vh) auto;
+  grid-template-rows: repeat(4, 100vh) 25vh;
 `
 
 const GlobalStyle = createGlobalStyle`
@@ -39,6 +40,7 @@ const Layout = ({ children }) => (
     <StyledMain>
       <GlobalStyle />
       {children}
+      <Footer />
     </StyledMain>
   </>
 )
