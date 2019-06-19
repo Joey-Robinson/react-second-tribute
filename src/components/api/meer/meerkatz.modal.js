@@ -2,6 +2,36 @@ import React, { useState } from "react"
 import Modal from "react-modal"
 import styled from "styled-components"
 
+const ModalOpenButton = styled.button`
+  grid-row: -1;
+  grid-column: 3;
+  justify-self: center;
+  align-self: start;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  color: #ff7d0a;
+  background: #00ff96;
+  border-radius: 5rem;
+  font-size: 2rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#666, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+`
+
 const ModalRecent = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 3;
@@ -54,23 +84,9 @@ const MeerkatzModal = ({ recent, best, weeklyBest, highest }) => {
 
   return (
     <div style={modalStyles}>
-      <button
-        style={{
-          color: "#00FF96",
-          background: "#FF7D0A",
-          borderRadius: `5rem`,
-          border: "none",
-          outline: "none",
-          cursor: "pointer",
-          fontSize: "2rem",
-          width: "100%",
-          padding: "1rem 1.5rem",
-          margin: "1.5rem",
-        }}
-        onClick={() => setModalIsOpen(!modalIsOpen)}
-      >
+      <ModalOpenButton onClick={() => setModalIsOpen(!modalIsOpen)}>
         See More
-      </button>
+      </ModalOpenButton>
       <Modal
         style={modalLayout}
         isOpen={modalIsOpen}
@@ -107,25 +123,9 @@ const MeerkatzModal = ({ recent, best, weeklyBest, highest }) => {
             {highest}
           </ul>
         </ModalOverallHighest>
-        <button
-          style={{
-            gridRow: "-1",
-            gridColumn: "3",
-            justifySelf: "center",
-            alignSelf: "center",
-            padding: "1rem 1.5rem",
-            cursor: "pointer",
-            background: "#00FF96",
-            color: "#FF7D0A",
-            borderRadius: "5rem",
-            width: "100%",
-            border: "none",
-            outline: "none",
-          }}
-          onClick={() => setModalIsOpen(!modalIsOpen)}
-        >
+        <ModalOpenButton onClick={() => setModalIsOpen(!modalIsOpen)}>
           Close
-        </button>
+        </ModalOpenButton>
       </Modal>
     </div>
   )
