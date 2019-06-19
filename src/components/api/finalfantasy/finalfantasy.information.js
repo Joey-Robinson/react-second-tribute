@@ -1,12 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+import choco from "../../../images/cutechoco.gif"
 
 const FFInformationDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(10, 1fr);
   a {
-    color: #fff;
+    color: #50131c;
   }
   h1 {
     font-size: 2.5rem;
@@ -62,6 +63,20 @@ const AvatarImageDiv = styled.div`
   }
 `
 
+const ChocoDiv = styled.div`
+  display: block;
+  position: relative;
+  grid-column: 1 / 3;
+  grid-row: 8;
+  left: 0;
+  bottom: -26.3px;
+  img {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+  }
+`
+
 const FinalFantasyInformation = ({
   name,
   birthday,
@@ -69,37 +84,43 @@ const FinalFantasyInformation = ({
   armory,
   freecompany,
   avatar,
-}) => (
-  <FFInformationDiv>
-    <NameDiv>
-      <h1>Name: {name}</h1>
-    </NameDiv>
-    <BirthdayDiv>
-      <h1>Nameday: {birthday}</h1>
-    </BirthdayDiv>
-    <ServerDiv>
-      <h1>Server: {server}</h1>
-    </ServerDiv>
-    <ArmoryDiv>
-      <h1>
-        <a target="_blank" rel="noopener noreferrer" href={armory}>
-          Lodestone Link &rarr;
+}) => {
+  const [isHidden, setIsHidden] = useState(false)
+  return (
+    <FFInformationDiv>
+      <NameDiv>
+        <h1>Name: {name}</h1>
+      </NameDiv>
+      <BirthdayDiv>
+        <h1>Nameday: {birthday}</h1>
+      </BirthdayDiv>
+      <ServerDiv>
+        <h1>Server: {server}</h1>
+      </ServerDiv>
+      <ArmoryDiv>
+        <h1>
+          <a target="_blank" rel="noopener noreferrer" href={armory}>
+            Lodestone Link &rarr;
+          </a>
+        </h1>
+      </ArmoryDiv>
+      <FreeCompanyDiv>
+        <h1>
+          <a target="_blank" rel="noopener noreferrer" href={freecompany}>
+            Free Company: The Last Homely House
+          </a>
+        </h1>
+      </FreeCompanyDiv>
+      <AvatarImageDiv>
+        <a target="_blank" rel="noopener noreferrer" href={avatar}>
+          <img src={avatar} alt="" />
         </a>
-      </h1>
-    </ArmoryDiv>
-    <FreeCompanyDiv>
-      <h1>
-        <a target="_blank" rel="noopener noreferrer" href={freecompany}>
-          Free Company: The Last Homely House
-        </a>
-      </h1>
-    </FreeCompanyDiv>
-    <AvatarImageDiv>
-      <a target="_blank" rel="noopener noreferrer" href={avatar}>
-        <img src={avatar} alt="" />
-      </a>
-    </AvatarImageDiv>
-  </FFInformationDiv>
-)
+      </AvatarImageDiv>
+      <ChocoDiv>
+        <img src={choco} alt="" />
+      </ChocoDiv>
+    </FFInformationDiv>
+  )
+}
 
 export default FinalFantasyInformation
