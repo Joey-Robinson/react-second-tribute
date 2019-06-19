@@ -13,17 +13,12 @@ const niceThings = [
   something not known, then it will be asked or explained, which goes a long way, especially with new(er) individuals.`,
 ]
 
+// prettier-ignore
+const randomNumber = Math.floor(Math.random() * (niceThings.length))
 const Quotes = () => {
-  // prettier-ignore
-  const randomNumber = Math.floor(Math.random() * (niceThings.length))
-
   return (
     <div>
-      <p>
-        {() => {
-          niceThings[randomNumber]
-        }}
-      </p>
+      <p>{niceThings[randomNumber]}</p>
     </div>
   )
 }

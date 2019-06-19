@@ -4,7 +4,21 @@ import Typed from "react-typed"
 import Quotes from "./quotes"
 
 const StyledHero = styled.section`
-  background: #e7e0e0;
+  background-image: linear-gradient(
+    to right top,
+    #e7e0e0,
+    #ebe6e7,
+    #efebed,
+    #f4f1f3,
+    #f8f7f8,
+    #f7f6f7,
+    #f5f5f5,
+    #f4f4f4,
+    #ececec,
+    #e3e3e3,
+    #dbdbdb,
+    #d3d3d3
+  );
   display: grid;
   grid-column: 1;
   grid-row: 1;
@@ -18,6 +32,7 @@ const StyledHero = styled.section`
     grid-column: 1 / -1;
     grid-row: 3;
     justify-self: center;
+    text-shadow: 2px 2px black;
     span {
       color: black;
     }
