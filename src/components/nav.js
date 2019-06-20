@@ -16,8 +16,8 @@ const styles = {
   bmBurgerButton: {
     height: "30px",
     position: "fixed",
-    right: "36px",
-    top: "36px",
+    right: "20px",
+    top: "20px",
     width: "36px",
   },
   bmBurgerBars: {
@@ -27,11 +27,16 @@ const styles = {
     background: "#a90000",
   },
   bmCrossButton: {
-    height: "24px",
-    width: "24px",
+    height: "30px",
+    position: "fixed",
+    right: "20px",
+    top: "20px",
+    width: "36px",
+    fontSize: "3rem",
   },
   bmCross: {
-    background: "#bdc3c7",
+    fontSize: "3rem",
+    background: "black",
   },
   bmMenuWrap: {
     height: "100%",

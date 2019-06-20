@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Wow from "../components/wow"
 import FinalFantasy from "../components/finalfantasy"
+import FavoriteCarousel from "../components/carousel"
 
 const IndexPage = () => (
   <Layout>
@@ -11,6 +12,7 @@ const IndexPage = () => (
     <Hero />
     <Wow />
     <FinalFantasy />
+    <FavoriteCarousel />
   </Layout>
 )
 
