@@ -12,18 +12,28 @@ const CarouselContainer = styled.section`
   height: 100vh;
   padding: 0;
   margin: 0;
+  img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
 `
 
 const FavoriteCarousel = () => {
   const images = [
     {
-      original: "http://lorempixel.com/1000/600/nature/1/",
+      original: dalaran,
+      originalTitle: "Legion Dalaran",
+      originalAlt: "Legion Dalaran",
+      description: "Legion Dalaran",
     },
     {
-      original: "http://lorempixel.com/1000/600/nature/2/",
+      original: home,
     },
     {
-      original: "http://lorempixel.com/1000/600/nature/3/",
+      original: nagrand,
     },
   ]
   return (
