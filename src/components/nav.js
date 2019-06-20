@@ -1,19 +1,5 @@
 import React from "react"
 import { stack as Menu } from "react-burger-menu"
-// import { Link } from "gatsby"
-// import styled from "styled-components"
-
-// const MenuContainer = styled.div`
-//   background: orange;
-//   border-radius: 10rem;
-//   display: block;
-//   height: 40px;
-//   padding: 1rem;
-//   position: fixed;
-//   right: 32px;
-//   top: 32px;
-//   width: 46px;
-// `
 
 const styles = {
   bmBurgerButton: {
