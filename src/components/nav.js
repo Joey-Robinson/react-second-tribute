@@ -1,5 +1,16 @@
 import React from "react"
 import { stack as Menu } from "react-burger-menu"
+import styled from "styled-components"
+
+const MenuList = styled.ul`
+  align-self: center;
+  border: none;
+  font-size: 3rem;
+  justify-self: center;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+`
 
 const styles = {
   bmBurgerButton: {
@@ -27,16 +38,20 @@ const styles = {
     position: "fixed",
   },
   bmMenu: {
-    background: "#373a47",
-    fontSize: "1.15em",
-    padding: "2.5em 1.5em 0",
+    background: "linear-gradient(to right bottom, #db36a4, #f7ff00)",
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    gridTemplateRows: "1fr",
   },
   bmMorphShape: {
     fill: "#373a47",
   },
   bmItemList: {
-    color: "#b8b7ad",
+    color: "#fff",
     padding: "0.8em",
+    display: "grid",
+    alignSelf: "center",
+    justifySelf: "center",
   },
   bmItem: {
     display: "inline-block",
@@ -47,12 +62,12 @@ const styles = {
 }
 
 const Nav = () => (
-  <Menu right styles={styles}>
-    <ul>
+  <Menu right styles={styles} width={"50vw"}>
+    <MenuList>
       <li>one</li>
       <li>two</li>
       <li>three</li>
-    </ul>
+    </MenuList>
   </Menu>
 )
 
