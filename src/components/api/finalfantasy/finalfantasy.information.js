@@ -108,7 +108,7 @@ const FinalFantasyInformation = ({
       <FreeCompanyDiv>
         <h1>
           <a target="_blank" rel="noopener noreferrer" href={freecompany}>
-            Free Company: The Last Homely House
+            Free Company: The Last Homely House &rarr;
           </a>
         </h1>
       </FreeCompanyDiv>

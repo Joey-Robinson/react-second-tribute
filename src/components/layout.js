@@ -11,6 +11,19 @@ const StyledMain = styled.main`
   width: 100vw;
 `
 
+const NavWrapper = styled.div`
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  border-radius: 5rem;
+  height: 30px;
+  width: 36px;
+  padding: 3rem;
+  background: darkgray;
+  box-shadow: 2px 2px black;
+  z-index: 3;
+`
+
 const GlobalStyle = createGlobalStyle`
   *,
   *::before,
@@ -36,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = ({ children }) => (
   <>
+    <NavWrapper />
     <Nav />
     <StyledMain>
       <GlobalStyle />

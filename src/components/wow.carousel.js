@@ -24,6 +24,7 @@ import visitor from "../images/visitor.jpg"
 import wodnagrand from "../images/wodnagrand.jpg"
 import zang from "../images/zangarmarsh.jpg"
 import valeold from "../images/valeold.jpg"
+import jarod from "../images/jarodisthebest.jpg"
 
 const CarouselContainer = styled.section`
   grid-column: 1;
@@ -153,6 +154,11 @@ const WowCarousel = () => {
       original: zang,
       originalAlt: "Zangarmarsh",
       description: "Zangarmarsh",
+    },
+    {
+      original: jarod,
+      originalAlt: "Jarod Shadowsong",
+      description: "Jarod Shadowsong Is LITERALLY The Best NPC. EVER.",
     },
   ]
   return (

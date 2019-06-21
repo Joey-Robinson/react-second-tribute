@@ -14,14 +14,16 @@ const MenuList = styled.ul`
 
 const styles = {
   bmBurgerButton: {
+    zIndex: "4",
     height: "30px",
     position: "fixed",
-    right: "20px",
-    top: "20px",
+    right: "32px",
+    top: "36px",
     width: "36px",
   },
   bmBurgerBars: {
     background: "black",
+    height: "4px",
   },
   bmBurgerBarsHover: {
     background: "#a90000",
@@ -29,17 +31,15 @@ const styles = {
   bmCrossButton: {
     height: "30px",
     position: "fixed",
-    right: "20px",
-    top: "20px",
+    right: "32px",
+    top: "34px",
     width: "36px",
-    fontSize: "3rem",
   },
   bmCross: {
-    fontSize: "3rem",
     background: "black",
+    height: "30px",
   },
   bmMenuWrap: {
-    height: "100%",
     position: "fixed",
   },
   bmMenu: {
