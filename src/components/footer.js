@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
   display: grid;
   font-weight: 700;
   grid-column: 1 / -1;
-  grid-row: 5;
+  grid-row: 6;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
 `

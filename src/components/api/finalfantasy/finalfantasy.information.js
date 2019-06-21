@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import choco from "../../../images/cutechoco.gif"
 
@@ -58,8 +58,10 @@ const AvatarImageDiv = styled.div`
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     justify-self: right;
-
     display: block;
+  }
+  img {
+    max-height: 100vh;
   }
 `
 
@@ -85,7 +87,6 @@ const FinalFantasyInformation = ({
   freecompany,
   avatar,
 }) => {
-  const [isHidden, setIsHidden] = useState(false)
   return (
     <FFInformationDiv>
       <NameDiv>
