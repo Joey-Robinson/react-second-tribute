@@ -9,8 +9,8 @@ const ModalOpenButton = styled.button`
   align-self: start;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  color: #ff7d0a;
-  background: #00ff96;
+  background: #ff7d0a;
+  color: #00ff96;
   border-radius: 5rem;
   font-size: 2rem;
   width: 100%;

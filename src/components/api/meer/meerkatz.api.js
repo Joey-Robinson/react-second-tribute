@@ -109,6 +109,7 @@ const Meerkats = () => {
     )
   }
 
+  console.log(meerkatsApiCall)
   // Modal Content - Best Overall M+
   const modalBestOverallTop = {
     ...meerkatsApiCall.mythic_plus_highest_level_runs,
@@ -130,7 +131,6 @@ const Meerkats = () => {
       </li>
     )
   }
-
   return (
     <Flippy
       style={{
@@ -176,8 +176,8 @@ const Meerkats = () => {
         <MeerkatzModal
           recent={modalRecent}
           best={modalBest}
-          weeklyBest={"" ? modalWeeklyBest : "Whoops"}
           highest={modalBestoverall}
+          weeklyBest={{} ? modalWeeklyBest : "See"}
         />
       </BackSide>
     </Flippy>

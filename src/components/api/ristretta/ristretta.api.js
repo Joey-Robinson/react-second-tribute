@@ -130,7 +130,6 @@ const Ristretta = () => {
       </li>
     )
   }
-
   return (
     <Flippy
       style={{
@@ -163,7 +162,7 @@ const Ristretta = () => {
           background: "white",
           height: "100%",
           width: "100%",
-          backgroundImage: `linear-gradient(to right bottom, #00FF96, #FF7D0A)`,
+          backgroundImage: `linear-gradient(to right bottom, #FF7D0A, #00FF96)`,
         }}
       >
         <RistrettaBackCard
@@ -176,8 +175,8 @@ const Ristretta = () => {
         <RistrettaModal
           recent={modalRecent}
           best={modalBest}
-          weeklyBest={"" ? modalWeeklyBest : "Whoops"}
           highest={modalBestoverall}
+          weeklyBest={{} ? "See" : modalWeeklyBest}
         />
       </BackSide>
     </Flippy>

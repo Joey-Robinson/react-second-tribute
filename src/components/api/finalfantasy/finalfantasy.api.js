@@ -10,7 +10,6 @@ const FinalFantasyMeer = () => {
   }, [])
 
   const meerkatsCompareTop = { ...finalFantasyCall.Character }
-  console.log(meerkatsCompareTop)
   const name = meerkatsCompareTop.Name
   const avatar = meerkatsCompareTop.Portrait
   const birthday = meerkatsCompareTop.Nameday
