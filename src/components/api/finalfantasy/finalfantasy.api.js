@@ -19,7 +19,8 @@ const FinalFantasyMeer = () => {
     "https://na.finalfantasyxiv.com/lodestone/freecompany/9234490298434948752/"
 
   return (
-    <div>
+    <>
+      <a id="final-fantasy" href="final-fantasy" />
       <FinalFantasyInformation
         name={name}
         avatar={avatar}
@@ -28,7 +29,7 @@ const FinalFantasyMeer = () => {
         armory={armory}
         freecompany={freecompany}
       />
-    </div>
+    </>
   )
 }
 

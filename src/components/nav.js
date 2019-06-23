@@ -1,6 +1,8 @@
 import React from "react"
 import { stack as Menu } from "react-burger-menu"
 import styled from "styled-components"
+import { Link } from "gatsby"
+import pepetwo from "../images/pepetwo.png"
 
 const MenuList = styled.ul`
   align-self: center;
@@ -66,12 +68,36 @@ const styles = {
   },
 }
 
+const imagestyles = {
+  position: "absolute",
+  left: "0",
+  bottom: "0",
+  width: "2rem",
+  height: "2rem",
+}
+
 const Nav = () => (
   <Menu right styles={styles} width={"50vw"}>
     <MenuList>
-      <li>one</li>
-      <li>two</li>
-      <li>three</li>
+      <li>
+        <Link to="/">Top</Link>
+      </li>
+      <li>
+        <a href="#wow">WoW Section</a>
+      </li>
+      <li>
+        <a href="#wow-carousel">WoW Carousel</a>
+      </li>
+      <li>
+        <a href="#final-fantasy">Final Fantasy Section</a>
+      </li>
+      <li>
+        <a href="#final-fantasy-carousel">Final Fantasy Carousel</a>
+      </li>
+      <li>
+        <Link to="/resources/">To Resources</Link>
+      </li>
+      <img style={imagestyles} src={pepetwo} alt="" />
     </MenuList>
   </Menu>
 )

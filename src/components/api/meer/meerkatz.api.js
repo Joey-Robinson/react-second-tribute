@@ -109,7 +109,6 @@ const Meerkats = () => {
     )
   }
 
-  console.log(meerkatsApiCall)
   // Modal Content - Best Overall M+
   const modalBestOverallTop = {
     ...meerkatsApiCall.mythic_plus_highest_level_runs,

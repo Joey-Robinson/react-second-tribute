@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import pepefour from "../images/pepefour.png"
 
 const ResourcesMessage = styled.section`
   grid-row: 1;
@@ -179,11 +180,20 @@ const wowresources = [
   },
 ]
 
+const imagestyles = {
+  position: "absolute",
+  left: "0",
+  bottom: "0",
+  width: "2rem",
+  height: "2rem",
+}
+
 const Resources = () => (
   <Layout>
     <SEO title="Resources" />
     <ResourcesMessage>
-      <h1>Hi</h1>
+      <h1>This is the resources page!</h1>
+      <img style={imagestyles} src={pepefour} alt="" />
     </ResourcesMessage>
     <FFLayout>
       {ffresources.map(info => (

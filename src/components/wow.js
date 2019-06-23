@@ -39,6 +39,7 @@ const WowStyledSection = styled.section`
 
 const Wow = () => (
   <WowStyledSection>
+    <a id="wow" href="wow" />
     <Meerkats />
     <Ristretta />
     <DancingDiv>

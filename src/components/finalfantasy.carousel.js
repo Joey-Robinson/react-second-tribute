@@ -331,6 +331,7 @@ const FinalFantasyCarousel = () => {
   ]
   return (
     <CarouselContainer>
+      <a id="final-fantasy-carousel" href="final-fantasy-carousel" />
       <ImageGallery
         items={images}
         showThumbnails={false}

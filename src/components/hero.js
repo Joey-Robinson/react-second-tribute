@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Typed from "react-typed"
-import Quotes from "./quotes"
+import pepethree from "../images/pepethree.png"
 
 const StyledHero = styled.section`
   background-image: linear-gradient(
@@ -45,6 +45,14 @@ const StyledHero = styled.section`
   }
 `
 
+const imagestyles = {
+  position: "absolute",
+  left: "0",
+  bottom: "0",
+  width: "2rem",
+  height: "2rem",
+}
+
 const Hero = () => {
   return (
     <StyledHero>
@@ -57,7 +65,7 @@ const Hero = () => {
           loop
         />
       </h1>
-      <Quotes />
+      <img style={imagestyles} src={pepethree} alt="" />
     </StyledHero>
   )
 }

@@ -163,6 +163,7 @@ const WowCarousel = () => {
   ]
   return (
     <CarouselContainer>
+      <a id="wow-carousel" href="wowcarousel"></a>
       <ImageGallery
         items={images}
         showThumbnails={false}
