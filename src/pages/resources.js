@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import pepefour from "../images/pepefour.png"
+import shocked from "../images/shock.gif"
 
 const ResourcesMessage = styled.section`
   grid-row: 1;
@@ -180,6 +181,13 @@ const wowresources = [
   },
 ]
 
+const ShockedDiv = styled.div`
+  grid-row: 4;
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+`
+
 const imagestyles = {
   position: "absolute",
   left: "0",
@@ -193,7 +201,7 @@ const Resources = () => (
     <SEO title="Resources" />
     <ResourcesMessage>
       <h1>This is the resources page!</h1>
-      <img style={imagestyles} src={pepefour} alt="" />
+      <img style={imagestyles} src={pepefour} alt="Cute Pepe Four" />
     </ResourcesMessage>
     <FFLayout>
       {ffresources.map(info => (
@@ -211,6 +219,9 @@ const Resources = () => (
         </div>
       ))}
     </WowLayout>
+    <ShockedDiv>
+      <img src={shocked} alt="Shocked Cat" />
+    </ShockedDiv>
   </Layout>
 )
 

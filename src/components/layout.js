@@ -61,7 +61,7 @@ const imagestyles = {
 const Layout = ({ children }) => (
   <>
     <NavWrapper>
-      <img style={imagestyles} src={pepeone} alt="" />
+      <img style={imagestyles} src={pepeone} alt="Cute Pepe One" />
     </NavWrapper>
     <Nav />
     <StyledMain>

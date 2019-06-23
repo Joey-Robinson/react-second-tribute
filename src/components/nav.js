@@ -97,7 +97,7 @@ const Nav = () => (
       <li>
         <Link to="/resources/">To Resources</Link>
       </li>
-      <img style={imagestyles} src={pepetwo} alt="" />
+      <img style={imagestyles} src={pepetwo} alt="Cute Pepe Two" />
     </MenuList>
   </Menu>
 )

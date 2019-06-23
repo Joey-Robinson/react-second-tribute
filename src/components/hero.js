@@ -65,7 +65,7 @@ const Hero = () => {
           loop
         />
       </h1>
-      <img style={imagestyles} src={pepethree} alt="" />
+      <img style={imagestyles} src={pepethree} alt="Cute Pepe Three" />
     </StyledHero>
   )
 }
