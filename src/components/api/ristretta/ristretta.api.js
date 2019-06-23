@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import Flippy, { FrontSide, BackSide } from "react-flippy"
-import RistrettaModal from "./Ristretta.modal"
-import RistrettaFrontCard from "./Ristretta.front-card"
-import RistrettaBackCard from "./Ristretta.back-card"
+import RistrettaModal from "./ristretta.modal"
+import RistrettaFrontCard from "./ristretta.front-card"
+import RistrettaBackCard from "./ristretta.back-card"
 
 const Ristretta = () => {
   const [ristrettaApiCall, setRistrettaApiCall] = useState({})
