@@ -9,7 +9,7 @@ import FinalFantasyCarousel from "../components/finalfantasy.carousel"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Meowkats" />
     <Hero />
     <Wow />
     <WowCarousel />

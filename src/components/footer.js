@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 const StyledFooter = styled.footer`
   a {
@@ -55,6 +56,7 @@ const Footer = () => (
         @joeyrobinsondev
       </a>
     </FooterMaker>
+    <Link to="/resources/">Resources</Link>
   </StyledFooter>
 )
 
