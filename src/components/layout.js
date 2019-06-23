@@ -6,7 +6,7 @@ import Footer from "./footer"
 const StyledMain = styled.main`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 100vh) 25vh;
+  grid-template-rows: repeat(5, 100vh) 5vh;
   overflow-x: hidden;
   width: 100vw;
 `

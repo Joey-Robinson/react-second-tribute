@@ -26,16 +26,17 @@ const StyledFooter = styled.footer`
   font-weight: 700;
   grid-column: 1 / -1;
   grid-row: 6;
+  height: 5vh;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 1fr;
 `
 
 const FooterMaker = styled.div`
-  align-self: center;
-  grid-column: 3;
-  grid-row: 5;
+  align-self: end;
+  grid-column: 1 / -1;
   justify-self: center;
   font-size: 1.4rem;
+  grid-row: 1;
   width: 100%;
   text-align: center;
   a {
@@ -44,10 +45,17 @@ const FooterMaker = styled.div`
   }
 `
 
+const FooterResources = styled.div`
+  grid-column: 1 / 3;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+`
+
 const Footer = () => (
   <StyledFooter>
     <FooterMaker>
-      © {new Date().getFullYear()} Joey Robinson <br />
+      © {new Date().getFullYear()} Joey Robinson&nbsp;&nbsp;
       <a
         href="https://twitter.com/joeyrobinsondev"
         target="_blank"
@@ -56,7 +64,9 @@ const Footer = () => (
         @joeyrobinsondev
       </a>
     </FooterMaker>
-    <Link to="/resources/">Resources</Link>
+    <FooterResources>
+      <Link to="/resources/">Resources</Link>
+    </FooterResources>
   </StyledFooter>
 )
 

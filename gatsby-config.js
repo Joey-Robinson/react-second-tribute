@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Meerkatz | Ristretta`,
+    title: `Meerkatz & Ristretta`,
     description: `A page for Meerkatz The Druid & Ristretta The Monk, as well as Meerkats from FF14.`,
     author: `@joeyrobinsondev`,
   },
