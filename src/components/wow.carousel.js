@@ -51,11 +51,6 @@ const WowCarousel = () => {
       description: "Legion Dalaran",
     },
     {
-      original: visitor,
-      originalAlt: "A visitor in a strange place",
-      description: "A visitor",
-    },
-    {
       original: nagrand,
       originalAlt: "Legion Nagrand",
       description: "Legion Nagrand",
@@ -64,6 +59,11 @@ const WowCarousel = () => {
       original: gorgrond,
       originalAlt: "Gorgrond",
       description: "Gorgrond",
+    },
+    {
+      original: visitor,
+      originalAlt: "A visitor in a strange place",
+      description: "A visitor",
     },
     {
       original: krasarang,
