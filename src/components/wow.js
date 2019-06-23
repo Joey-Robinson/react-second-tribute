@@ -3,26 +3,6 @@ import styled from "styled-components"
 import Meerkats from "./api/meer/meerkatz.api"
 import Ristretta from "./api/ristretta/ristretta.api"
 import wowbg from "../images/wowbg.jpg"
-import pepe from "../images/dancingpepe.gif"
-
-const DancingDiv = styled.div`
-  display: block;
-  position: relative;
-  grid-column: 1 / 3;
-  grid-row: 8;
-  left: 0;
-  bottom: -13px;
-  img {
-    display: block;
-    width: 10rem;
-    height: 10rem;
-  }
-  a {
-    display: block;
-    width: 10rem;
-    height: 10rem;
-  }
-`
 
 const WowStyledSection = styled.section`
   background: linear-gradient(
@@ -42,11 +22,6 @@ const Wow = () => (
     <a id="wow" href="wow" />
     <Meerkats />
     <Ristretta />
-    <DancingDiv>
-      <a href={pepe} target="_blank" rel="noopener noreferrer">
-        <img src={pepe} alt="Dancing Pepe" />
-      </a>
-    </DancingDiv>
   </WowStyledSection>
 )
 

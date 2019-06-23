@@ -46,6 +46,11 @@ const CarouselContainer = styled.section`
 const WowCarousel = () => {
   const images = [
     {
+      original: dalaran,
+      originalAlt: "Legion Dalaran",
+      description: "Legion Dalaran",
+    },
+    {
       original: visitor,
       originalAlt: "A visitor in a strange place",
       description: "A visitor",
@@ -59,11 +64,6 @@ const WowCarousel = () => {
       original: gorgrond,
       originalAlt: "Gorgrond",
       description: "Gorgrond",
-    },
-    {
-      original: dalaran,
-      originalAlt: "Legion Dalaran",
-      description: "Legion Dalaran",
     },
     {
       original: krasarang,
